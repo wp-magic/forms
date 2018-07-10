@@ -1,0 +1,4 @@
+{% set msg = attribute( post, 'error_' ~ err ) %}
+{% if err in errors and msg %}
+  <div class="error">{{ msg }}</div>
+{% endif %}

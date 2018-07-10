@@ -1,0 +1,22 @@
+{% set before = attribute( post, 'before_' ~ name ~ '_text' ) %}
+{% if before %}
+  <label for="{{ name }}" class="before">{{ before }}</label>
+{% endif %}
+
+{% set error_msg = attribute( post, 'error_' ~ error ) %}
+{% if error in errors and error_msg %}
+<div class="error">{{ error_msg }}</div>
+{% endif %}
+
+{% set placeholder = attribute( post, name ~ '_placeholder' ) %}
+<input
+  name="{{ name }}"
+  type="{% if type %}{{ type }}{% else %}text{% endif %}"
+  placeholder="{{ placeholder }}"
+  value="{{ query[name] }}"
+/>
+
+{% set after = attribute( post, 'after_' ~ name ~ '_text' ) %}
+{% if after %}
+  <label for="{{ name }}" class="after">{{ after }}</label>
+{% endif %}
