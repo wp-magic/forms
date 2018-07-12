@@ -4,14 +4,19 @@ form {
 	.error {
 		color: @accent_color;
 	}
-
-	ul li {
-		margin: 0.5em 0;
-	}
 }
 
-button {
+button,
+input[type=submit],
+input[type=button] {
 	cursor: pointer;
+	transition: color 300ms, background-color 300ms;
+
+	&:hover {
+		color: @header_background_color;
+		background-color: @text_color;
+		border-color: @header_background_color;
+	}
 }
 
 input,
@@ -22,6 +27,11 @@ button {
 	padding: 0.5em;
 	width: 100%;
 	color: @text_color;
+	margin: 0.5em 0;
+
+	&.small {
+		width: auto;
+	}
 }
 
 label.check {
@@ -101,4 +111,12 @@ input[type=checkbox] {
       transition-delay: 0.15s;
     }
   }
+}
+
+@media screen and (min-width: 700px) {
+	button,
+	input[type=submit],
+	input[type=button] {
+		width: auto;
+	}
 }
