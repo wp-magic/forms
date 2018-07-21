@@ -10,7 +10,7 @@ if ( is_admin() ) {
 add_action('init', function() {
 	// Load plugin text domain
   load_plugin_textdomain(
-    MAGIC_CONTACT_FORM_SLUG,
+    MAGIC_FORMS_SLUG,
     FALSE,
     plugin_dir_path( __FILE__ ) . 'languages'
   );
