@@ -1,0 +1,6 @@
+debug {{ WP_DEBUG }}
+{% if WP_DEBUG and errors %}
+  {% for error in errors %}
+    <div class="error">{{ msg }}</div>
+  {% endfor %}
+{% endif %}
