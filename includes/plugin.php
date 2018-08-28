@@ -4,8 +4,9 @@ require_once 'styles/index.php';
 
 if ( is_admin() ) {
 	require_once 'admin/requirements.php';
-	// require_once 'admin/dashboard.php';
 }
+
+require_once 'admin/customizer.php';
 
 add_action('init', function() {
 	// Load plugin text domain
