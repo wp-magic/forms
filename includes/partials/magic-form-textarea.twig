@@ -9,7 +9,11 @@
 {% endif %}
 
 {% set placeholder = attribute( post, name ~ '_placeholder' ) %}
-<textarea name="{{ name }}" placeholder="{{ placeholder }}" rows="{{ rows }}">{{ query[content] }}</textarea>
+<textarea
+  name="{{ name }}"
+  placeholder="{{ placeholder }}"
+  rows="{{ rows }}"
+>{{ query[content] }}</textarea>
 
 {% set after = attribute( post, 'after_' ~ name ~ '_text' ) %}
 {% if after %}
