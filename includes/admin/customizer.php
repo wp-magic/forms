@@ -67,9 +67,9 @@ add_action( 'customize_register', function ( $wp_customize ) {
 	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_background_color', '#191919', 'Input Field Background Color', 'WP_Customize_Color_Control' );
 	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_border_color', '#aaa', 'Input Field Border Color', 'WP_Customize_Color_Control' );
 
-	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_text_color', '#fff', 'Hover Input Field Text Color', 'WP_Customize_Color_Control' );
-	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_background_color', '#191919', 'Hover Input Field Background Color', 'WP_Customize_Color_Control' );
-	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_border_color', '#fff', 'Hover Input Field Border Color', 'WP_Customize_Color_Control' );
+	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_text_color_hover', '#fff', 'Hover Input Field Text Color', 'WP_Customize_Color_Control' );
+	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_background_color_hover', '#191919', 'Hover Input Field Background Color', 'WP_Customize_Color_Control' );
+	mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'input_border_color_hover', '#fff', 'Hover Input Field Border Color', 'WP_Customize_Color_Control' );
 
   mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'error_color', '#ed1c24', 'Error Message Text Color', 'WP_Customize_Color_Control' );
   mforms_add_customizer( $wp_customize, MAGIC_FORMS_SLUG, 'warning_color', '#ffff22', 'Warn Message Text Color', 'WP_Customize_Color_Control' );
