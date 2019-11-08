@@ -20,7 +20,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-  die;
+	die;
 }
 
 define( 'MAGIC_FORMS_SLUG', 'magic_forms' );
@@ -28,10 +28,16 @@ define( 'MAGIC_FORMS_SLUG', 'magic_forms' );
 require_once plugin_dir_path( __FILE__ ) . 'includes/plugin.php';
 
 // Register callback that is fired when the plugin is activated.
-register_activation_hook( __FILE__, function () {
-  flush_rewrite_rules();
-} );
+register_activation_hook(
+	__FILE__,
+	function () {
+		flush_rewrite_rules();
+	}
+);
 
-register_deactivation_hook( __FILE__, function () {
-  flush_rewrite_rules();
-} );
+register_deactivation_hook(
+	__FILE__,
+	function () {
+		flush_rewrite_rules();
+	}
+);
